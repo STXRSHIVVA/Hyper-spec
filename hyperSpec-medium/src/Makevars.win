@@ -1,0 +1,16 @@
+TARGET_DIR = rust/target
+LIBDIR = $(TARGET_DIR)/release
+STATLIB = $(LIBDIR)/libfaerextendr.a
+
+PKG_LIBS = -L$(LIBDIR) -lfaerextendr
+
+all: $(SHLIB)
+
+$(STATLIB):
+	cargo build --manifest-path=rust/Cargo.toml --lib --release
+
+$(SHLIB): $(STATLIB)
+
+clean:
+	cargo clean --manifest-path=rust/Cargo.toml
+	rm -f $(SHLIB) $(OBJECTS)

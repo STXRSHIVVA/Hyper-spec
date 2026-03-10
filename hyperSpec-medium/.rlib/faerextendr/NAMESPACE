@@ -1,0 +1,2 @@
+useDynLib(faerextendr, .registration = TRUE)
+export(row_sums)

@@ -1,0 +1,14 @@
+Package: faerextendr
+Title: Minimal extendr Package Using faer for Row Sums
+Version: 0.0.0.9000
+Authors@R: 
+    person("Codex", "Agent", email = "codex@example.com", role = c("aut", "cre"))
+Description: Minimal example package that passes an R dense matrix to Rust,
+    computes row sums with faer, and returns the result to R.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+SystemRequirements: Cargo (Rust's package manager), rustc
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
